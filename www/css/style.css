@@ -1,0 +1,224 @@
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+.container {
+  background-color: #2ecc71; /* light */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.iphoneNotifications {
+  position: absolute;
+  height: 0;
+  background-color: #2ecc71; /* light */
+}
+.app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 64px;
+}
+.description,
+.letter-list {
+  float: left;
+  height: 100%;
+  padding-top: 0;
+}
+.description {
+  width: 70%;
+  background-color: white;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.alphabetSelector li {
+  width: 10%;
+  display: inline-block;
+}
+.nonselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.letter-list {
+  color: #ecf0f1;
+  font-family: monospace;
+  box-shadow: -1px -0px 0px #ddd;
+  background-color: #2ecc71;
+  min-width: 6em;
+  width: 30%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  padding: 0;
+}
+li:nth-child(even) {
+  background-color: #27ae60;
+}
+
+ul .letter-list {
+  padding-top:0;
+  padding-bottom:5px;
+}
+li {
+  list-style-type: none;
+  font-size: 20px;
+  padding-top:0.2em;
+  padding-bottom:0.4em;
+}
+a {
+  display: block;
+  padding-left:5px;
+  padding-right:5px;
+}
+h1.symbol {
+  font-size: 50px;
+  text-align: center;
+}
+
+/**
+ * ==================================
+ * Ratchet v1.0.2
+ * Licensed under The MIT License
+ * http://opensource.org/licenses/MIT
+ * ==================================
+ */
+
+  /* Prevents iOS text size adjust after orientation change, without disabling (Thanks to @necolas) */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  /* General bar styles
+  -------------------------------------------------- */
+
+  [class*="bar-"] {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 44px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  /* Title bar
+  ------------- */
+  /* Bar docked to top of viewport for showing page title and actions */
+  .bar-title {
+  top: 20px;
+    height: 44px;
+    display: -webkit-box;
+    display: box;
+    background-color: #2ecc71;
+    border-bottom: 1px solid #2BBD69;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
+  }
+  /* Centered text in the .bar-title */
+  .bar-title .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 -1px rgba(0, 0, 0, .5);
+    white-space: nowrap;
+  }
+
+  .bar-title > a:not([class*="button"]) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Buttons in title bars
+  -------------------------------------------------- */
+
+  /* Generic style for all buttons in .bar-title */
+  .bar-title [class*="button"] {
+    position: relative;
+    z-index: 10; /* Places buttons over full width title */
+    font-size: 14px;
+    line-height: 23px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+    background-image: -webkit-linear-gradient(top, #28C568 0, #28C568 100%);
+    background-image:         linear-gradient(top, #28C568 0, #28C568 100%);
+    border: 1px solid #eee;
+    box-shadow: 0 1px rgba(255, 255, 255, .25);
+    -webkit-box-flex: 0;
+    box-flex: 0;
+  }
+
+
+  /* Hacky way to right align buttons outside of flex-box system
+  Note: is only absolutely positioned button, would be better if flex-box had an "align right" option */
+  .bar-title .title + [class*="button"]:last-child,
+  .bar-title .button + [class*="button"]:last-child,
+  .bar-title [class*="button"].pull-right {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-decoration: none !important;
+  }
+
+  /* Override standard button active states */
+  .bar-title .button:active {
+    color: #fff;
+    background-color: #21A156;
+  }
+
+
+  [class*="button"] {
+    position: relative;
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 0;
+    font-weight: bold;
+    line-height: 18px;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    background-image: -webkit-linear-gradient(top, #f8f8f8 0, #d4d4d4 100%);
+    background-image: linear-gradient(to bottom, #f8f8f8 0, #d4d4d4 100%);
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px 2px rgba(0, 0, 0, .05);
+  }
+
+  /* Active */
+  [class*="button"]:active {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    color: #333;
+    background-color: #ccc;
+    background-image: none;
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
+  }
+
