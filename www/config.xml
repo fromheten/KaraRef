@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.github.fromheten.KanaRef" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>KanaRef</name>
+    <preference name="DisallowOverscroll" value="true" />
+    <description>
+        Helps stupid westerners like to to get Japanese script
+    </description>
+    <author email="josefsson.martin+kanaref@gmail.com" href="http://fromheten.github.io">
+      Martin Josefsson
+    </author>
+    <content src="index.html" />
+    <access origin=""/>
+</widget>
