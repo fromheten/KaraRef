@@ -206,10 +206,3 @@ function wordTrainerController($scope) {
       console.log($scope.currentKana())
   };
 }
-
-
-document.body.addEventListener('touchmove',function(e){
-                               if(!$(e.target).hasClass("scrollable")) {
-                               e.preventDefault();
-                               }
-                               });
