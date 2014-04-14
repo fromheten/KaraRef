@@ -20,6 +20,7 @@
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
     <name>KanaRef</name>
+    <preference name="DisallowOverscroll" value="true" />
     <description>
         Helps stupid westerners like to to get Japanese script
     </description>
@@ -27,5 +28,5 @@
       Martin Josefsson
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="" />
 </widget>
