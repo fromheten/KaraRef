@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset=utf-8 />
+<title>Katakana reference</title>
+  <meta name ="apple-mobile-web-app-capable" content="yes">
+  <meta name ="format-detection" content="telephone=no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width" />
+
+  <link rel="stylesheet" type="text/css" href="css/ratchet.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/fastclick.js"></script>
+  <script src="js/words.js"></script>
+  <script> // For fastclick
+    window.addEventListener('load', function() {
+      FastClick.attach(document.body);
+    }, false);
+  </script>
+</head>
+<body ng-controller="wordTrainerController">
+<!-- &#45;&#45;&#45; -->
+<div class="container">
+    <div class="iphoneNotifications"></div>
+    <header class="nonselect bar-title">
+        <h1 class="title">かな reference</h1>
+        <a class="button" ng-click="changeKana()" href="#">
+{{nextKana}}</a>
+    </header>
+
+    <div class="app-container">
+      <div class="description">
+          <h1 class="symbol">{{theSymbol}} {{theLatin}}</h1>
+        {{theEtymology}}<br/>
+      </div>
+      <div class="nonselect letter-list">
+        <ul class="letters" ng-show="isHiragana">
+            <li ng-repeat="letter in hiragana" ng-click="showDescription(letter);">
+              <a class="letter">{{letter.symbol}}  {{letter.latin}}</a>
+            </li>
+        </ul>
+        <ul class="letters" ng-show="isKatakana">
+            <li ng-repeat="letter in katakana" ng-click="showDescription(letter);">
+              <a class="letter">{{letter.symbol}}  {{letter.latin}}</a>
+            </li>
+        </ul>
+
+      </div>
+      </div><!-- .app-container -->
+  </div><!-- container -->
+<!-- &#45;&#45;&#45; -->
+    </body>
+    </html>
