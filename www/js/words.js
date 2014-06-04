@@ -142,7 +142,7 @@ function wordTrainerController($scope) {
     {symbol: 'め', latin: "me", etymology:"Derived in the Heian period from writing the man'yōgana kanji 女 in the cursive sōsho style."},
     {symbol: 'も', latin: "mo", etymology:"Simplified in the Heian period from the man'yōgana kanji 毛 (もう, mō), meaning hair."},
     {symbol: 'や', latin: "ya", etymology:"Derived in the Heian period from writing the man'yōgana kanji 也 in the cursive sōsho style."},
-    {symbol: 'ゆ', latin: "yo", etymology:"Derived in the Heian period from writing the man'yōgana kanji 由 in the cursive sōsho style. Attaches to the irrealis form of verbs. Conjugates as a lower bigrade: ye, ye, yu, yuru, yure, -."},
+    {symbol: 'ゆ', latin: "yu", etymology:"Derived in the Heian period from writing the man'yōgana kanji 由 in the cursive sōsho style. Attaches to the irrealis form of verbs. Conjugates as a lower bigrade: ye, ye, yu, yuru, yure, -."},
     {symbol: 'よ', latin: "yo", etymology:"Derived in the Heian period from writing the man'yōgana kanji 与 in the cursive sōsho style."},
     {symbol: 'ら', latin: "ra", etymology:"Derived in the Heian period from writing the man'yōgana kanji 良 in the cursive sōsho style."},
     {symbol: 'り', latin: "ri", etymology:"Derived in the Heian period from writing the man'yōgana kanji 利 in the cursive sōsho style."},
